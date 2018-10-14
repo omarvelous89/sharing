@@ -1,0 +1,30 @@
+﻿In this analysis, we will focus on three states, California, North Dakota and South Dakota. These three states are the three most significant producers of Honey in the United States in terms of number of colonies, amount of honey produced and number of stocks owned by the producers. 
+
+
+In the first graphs we examine the number of viable colonies in the three states. North Dakota and South Dakota both show increasing trends with ND having the much more dramatic of the two. North Dakota more than doubled it’s population of colonies. California on the other hand shows a decline in viable colonies from a maximum of 450,000 in 1998 to 330,000 in 2012.
+
+
+The number of colonies only tells half the story since the productivity of the colony isn’t captured. The accompanying graph measures the output per colony in the states. While the yield per colony fluctuates regularly, and no state started at the same level of productivity, all three show a consistent downward trend in production of their colonies. California in particular appears to have suffered doubly since it lost more colonies and also has the least productive colonies in terms of honey production. 
+
+
+
+
+The next set of images also has two graphs. The first is a similar version the previous plot showing the yield of honey per colony. The accompanying graph plots the price each pound of honey sells for. As we can see between 2001 and 2002 when most states suffered a decline in their yield per colony, producers responded by increasing their prices to make up for the lost revenue. Prices went back down from 2004-2006 as colony yield rose slightly but as those numbers resumed their downward trend along with the number of colonies, the price rose steeply once again. Perhaps not coincidentally 2006 is when Colony Collapse Disorder was declared a large problem. The dips in production and increases in prices reflect that for these three states. Furthermore the changes in prices are nearly identical in timing and magnitude, indicating a highly niche market operating under similar stresses, namely the symptoms of Colony Collapse Disorder.
+
+
+The next scatterplot shows the total product value of the Honey produced in the state. The increases and decreases in total product value closely match the increases and decreases in price per lb of honey. North Dakota has a much higher product value than either California or South Dakota. This is unsurprising when we consider that all three share very similar prices per lb of honey but North Dakota has the largest amount of colonies as evidenced in the first graph.
+
+
+The next graph tests how closely related ownership of stock is to the total product value. Ideally if a product has a high value then ownership of stock should reflect a high valuation  by showing steady ownership. However, we see a continued decreasing trend stocks owned. Even North Dakota with it’s oddly high product value cannot buck the trend. This could be a sign that investors don’t want to take on the risk Colony Collapse Disorder poses. If we look at the first graph showing the number of colonies, after every increase in viable colonies, a decrease in yield and number of colonies followed. This means that honey producers can only rely on increasing prices to continue making a profit which isn’t sustainable especially for a non essential product such as honey.
+
+
+In the file titled totalprodhist, the total amount of honey produced by California, ND, and SD is shown. The histogram shows that the distribution of ND is more clustered together and doesn’t vary as much as CA or SD. This indicates that ND Honey production while suffered and decreased from peak production was able to withstand the effects of Colony Collapse Disorder much more effectively compared to its two main competitors. One explanation for this is ND’s dramatic increase, indicated above in an earlier plot. North Dakotan honey producers may have bought more colonies en masse to help stave of the effects of colony collapse as signs of dipping production had begun to emerge around 2000-2004. Whatever the reason having more viable colonies certainly helped keep honey production more stable in ND.
+
+
+The file titled priceboxplot has a boxplot of the price per lb of honey across all 50 states from 1998-2012. There were many outliers in this graph so after plotting the boxplot a dataframe slice in made with the condition that the average price be greater than $2.70. The states appearing in this dataframe have two things in common. Their number of colonies is orders of magnitude below CA, ND, SD and they’re located far from the three largest producers. A small presence in the honey market coupled with higher transportation costs due to the distances between these states and the high producing states translates to higher honey prices for the consumer.
+  
+
+
+
+
+Data used from https://www.kaggle.com/jessicali9530/honey-production
