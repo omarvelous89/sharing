@@ -1,0 +1,30 @@
+﻿1. (0.98*0.005) = 0.0049   (0.1*0.995)=0.0995
+(Positive rate*percentage of sufferers) + (False Positive Rate*percentage of non sufferers)
+
+
+0.0049+0.0995=0.1044= 10.44%
+
+
+2. 98% given
+3. 90% because the false positive rate is 10%. So correctly identifying a non sufferer means everyone else but the false positives
+
+
+4.1- [(0.98*0.005)+(0.9*0.995)]= 0.0996 = 9.96% misclassification
+
+
+Prob of misclassification = 1 - prob of correct classification
+
+
+
+
+
+
+
+
+BIAS DRILL
+1. The data we have wouldn’t tell us necessarily the most popular neighborhoods in Amsterdam, it would tell us the most popular neighborhoods that both natives and tourists like to rent in. 
+   1. December 24th is so close to a holiday that it seems unwise to use it as the only time period to collect data. It’s most likely not representative of the average population. People during holidays make decisions they normally wouldn’t.
+1. What type of mental health services? The first thing I would do is actually spell out what the specific services we want to measure are. Furthermore access to those services isn’t always provided in the same way from city to city. There will always be a difference based on how the city’s criteria for qualification and how they offer these services.
+   1. There are also many different types of mental disorders and each has it’s own treatment, sometimes multiple ones. Only similar programs based on similar methodologies should be considered if we’re looking for patterns.
+1. The ages of the people questions fall within a very narrow range. Out of a 175 people only 6 were older than 23. Of those 6 only two of the people were older than 20-something. This isn’t very representative of the entire population. From what I understand they also only visited one bar at one time. This is hardly a representative sample of the bar let alone one of Armenia.
+58 people were interviewed on 02/25. 65 people were interviewed on 02/26. 9 people on 02/27. 1 person on 02/28 and 1 person on 03/01. 03/02 had 40 interviews and 03/05 had the final 1 interviewee. This seems like an odd way to cluster your data time wise.
