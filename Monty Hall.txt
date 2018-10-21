@@ -1,0 +1,22 @@
+﻿When I first heard it the Monty Hall problem sounded overly complicated. Initially I assumed that I could play through the game a few times and see how many times I won depending on the choices the player and Monty can make. But such a brute force method wasn’t appealing. If I want the correct answer using that method I need to go through all possible iterations of the game which is not very efficient. 
+
+
+But there is one observation that I can make. If I can properly state the confines of the game and thus specify the data clearly I might not have to go through every single iteration of the game. If I assume a player picks door A and go through all valid iterations from that starting point, the game is then degenerate in a sense; it won’t matter which door the player chooses because I have specified all the different ways the game can progress and those possibilities are true no matter what. They only differ in the numbering of the doors. 
+
+
+1. So let’s assume the player picks door A…(And Monty will never open the door with the car!)
+
+
+1. The car can be behind door A, B or C. 
+
+
+1. If the player has picked door A and the car is behind door A, the player will lose if they switch and win if they don’t. For this instance Switching is a bad option.
+
+
+1. If the car is behind door B and the play has still chosen Door A, then Monty is forced to open door C which has nothing. The player will win if they switch but lose if they don’t. Here switching is the best option.
+
+
+1. If the car is behind door C and the player has chosen door A, a similar situation occurs, Monty again is forced to open door B and the player is in a similar situation to before where switching is the best option. 
+
+
+1. As mentioned before if we view the analysis from the starting point of a different door, the dynamics of the game will still be the same  and we would end up with a similar situation where switching led to a win ⅔ of the time. I can then conclude that switching is a better strategy when playing this game with Monty.
