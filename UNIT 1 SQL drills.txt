@@ -1,0 +1,64 @@
+postgres SQL Drills
+
+Unit 1 Lesson 2
+
+SELECT
+	*
+FROM 
+	stations
+WHERE 
+	station_id = 84;
+----------------------------------
+
+SELECT
+	*
+FROM 
+	stations
+WHERE 
+	station_id = 84;
+----------------------------------
+SELECT 
+	MIN(mintemperaturef)
+FROM
+	weather
+WHERE
+	precipitationin != 0 
+----------------------------------------
+----------------------------------------
+
+Unit 1 Lesson 3
+---------------
+
+SELECT
+	MAX(maxtemperaturef)
+FROM weather
+
+SELECT 
+	zip
+FROM 
+	weather
+WHERE 
+	maxtemperaturef = 134
+----------------------------------------
+SELECT
+	MIN(duration)
+FROM trips
+----------------------------------------
+SELECT 
+	start_station,
+	COUNT(*)
+FROM 
+	trips
+GROUP BY 
+	start_station;
+---------------------------------------
+
+SELECT
+	AVG(duration)
+FROM
+	trips
+GROUP BY
+	end_station;
+
+
+
