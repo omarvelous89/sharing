@@ -1,0 +1,55 @@
+SELECT neighbourhood,
+             COUNT(neighbourhood) AS frequency 
+    FROM     sfo_listings
+    GROUP BY neighbourhood
+    ORDER BY frequency DESC
+    LIMIT    50;
+
+#gives the most popular neighbourhood from sf0_listings based on word frequency
+
+
+## EDIT provides the most expensive/cheap listings in SF by neighborhood. popularity irrelevant
+SELECT neighbourhood, AVG (price)
+FROM sfo_listings
+GROUP BY neighbourhood
+ORDER BY AVG (price) desc
+--------------------------
+
+
+SELECT
+    sfo_calendar.calender_date,
+	sfo_calendar.available,
+	sfo_calendar.price,
+    sfo_listings.id,
+    sfo_listings.price,
+	sfo_listings.neighbourhood
+FROM
+    sfo_calendar
+JOIN
+    sfo_listings
+ON
+    sfo_listings.id = sfo_calendar.listing_id
+order by sfo_listings.price desc
+--------------------------------
+
+SELECT
+	EXTRACT(MONTH FROM calender_date) as month,
+	EXTRACT(YEAR FROM calender_date) as Year,
+	available,
+	avg (sfo_listings.price) as avg_price, 
+    COUNT (available) as frequency
+FROM
+    sfo_calendar
+JOIN
+    sfo_listings
+ON
+    sfo_listings.id = sfo_calendar.listing_id
+where EXTRACT(YEAR FROM calender_date) = 2019
+AND available = 't'
+GROUP BY
+     Year, month, available
+ORDER BY
+    avg_price asc;
+
+#Provides the best time of year for availability to travel to San Francisco. also ordered by price in ascending order so cheapest is first.
+
