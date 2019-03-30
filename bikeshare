@@ -1,0 +1,82 @@
+Challenge question
+
+WITH Raining as 
+(SELECT DATE(date) as rainy
+from weather
+Where events = 'Rain'
+group by rainy
+
+-- this is anaming method. no need for with again 
+), Rainy_days as 
+-- There are two CTEs here. 
+(SELECT
+trips.trip_id as ti,
+trips.duration,
+DATE(trips.start_date) as rr
+FROM 
+trips 
+JOIN 
+Raining 
+on 
+DATE(trips.start_date) = Raining.rainy
+ORDER BY 
+duration DESC
+)
+
+select Rainy_days.rr,  
+max(Rainy_days.duration)
+from Rainy_days
+group by Rainy_days.rr, Rainy_days.duration
+order by Rainy_days.duration DESC
+-- no where comment needed because
+-- columns should go in order
+
+-----------------------------------------------------------
+Question 2
+select station_id,
+count(CASE WHEN docks_available=0 THEN 1 ELSE 0 END) AS availability
+From status
+group by station_id
+order by availability DESC
+----------------------------------------------------------------
+--------------------------------
+Question 3
+SELECT
+start_station,
+dockcount,
+
+COUNT(*)
+
+FROM trips
+
+JOIN stations
+
+ON trips.start_station=stations.name
+
+GROUP BY start_station, dockcount
+
+ORDER BY dockcount DESC
+--------
+Question 1
+
+WITH Raining as 
+(SELECT DATE(date) as rainy
+from weather
+Where events = 'Rain'
+group by rainy
+) 
+
+
+SELECT
+trips.trip_id,
+trips.duration,
+DATE(trips.start_date)
+FROM 
+trips 
+JOIN 
+Raining 
+on 
+DATE(trips.start_date) = Raining.rainy
+ORDER BY 
+duration DESC
+LIMIT 3
